@@ -1,0 +1,16 @@
+## This is the voting app pod for end users
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    name: redis
+    app: demo-voting-app
+spec:
+  ports:
+    - targetPort: 6379
+      port: 6379
+  selector:
+    name: redis-pod
+    app: demo-voting-app

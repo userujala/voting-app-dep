@@ -1,0 +1,17 @@
+## This is the voting app pod for end users
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-app-service
+  labels:
+    name: voting-app-service
+    app: demo-voting-app
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 80
+      port: 80
+  selector:
+    name: voting-app-pod
+    app: demo-voting-app
