@@ -11,7 +11,6 @@ spec:
       name: voting-app-pod
       labels:
         name: voting-app-pod
-        app: demo-voting-app
     spec:
       containers:
         - name: voting-app-container
@@ -21,4 +20,3 @@ spec:
   replicas: 3
   selector:
     name: voting-app-pod
-    app: demo-voting-app
