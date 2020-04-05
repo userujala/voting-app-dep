@@ -18,5 +18,6 @@ spec:
           image: dockersamples/examplevotingapp_worker
   replicas: 1
   selector:
-    name: worker-app-pod
-    app: demo-voting-app
+    matchLabels:
+      name: worker-app-pod
+      app: demo-voting-app

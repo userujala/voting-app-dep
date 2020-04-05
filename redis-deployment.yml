@@ -20,5 +20,6 @@ spec:
             - containerPort: 6379
   replicas: 1
   selector:
-    name: redis-pod
-    app: demo-voting-app
+    matchLabels:
+      name: redis-pod
+      app: demo-voting-app

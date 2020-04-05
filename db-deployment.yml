@@ -23,5 +23,6 @@ spec:
               value: sample-voting1234
   replicas: 1
   selector:
-    name: db
-    app: demo-voting-app
+    matchLabels:
+      name: db
+      app: demo-voting-app
